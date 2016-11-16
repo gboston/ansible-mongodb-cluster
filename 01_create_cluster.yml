@@ -9,8 +9,8 @@
       yum: name=firewalld state=latest
     - name: firewalld running
       service: name=firewalld state=started
-    - name: Remove require tty
-      lineinfile: regexp="^\s+\w+\s+requiretty" dest=/etc/sudoers state=absent
+    - name: disable requiretty in /etc/sudoers
+      replace: regexp="^Defaults\s+requiretty$" replace="# Defaults    requiretty" dest="/etc/sudoers"
 
 - name: Install MongoDB
   hosts: mongo_servers
