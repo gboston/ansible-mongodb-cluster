@@ -4,6 +4,13 @@
   hosts: all
   roles:
   - role: common
+  tasks:
+    - name: Install Ansible Python 2 Dependencies
+      with_items:
+      - python-firewall
+      dnf:
+        name: "{{item}}"
+        state: present
 
 - name: Install MongoDB
   hosts: mongo_servers
