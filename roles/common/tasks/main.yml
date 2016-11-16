@@ -1,9 +1,8 @@
 ---
 # This Playbook runs all the common plays in the deployment
-- name: debug hostvariables
-  debug: hostvars
 - name: Create the hosts file for all machines
   template: src=hosts.j2 dest=/etc/hosts
+  debug: hostvars
 
 - name: Create the repository for 10Gen
   copy: src=10gen.repo.j2 dest=/etc/yum.repos.d/10gen.repo
