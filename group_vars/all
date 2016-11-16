@@ -20,10 +20,10 @@ mongodb_datadir_prefix: /data/
 # ...to override.
 #
 # iface: '{{ ansible_default_ipv4.interface }}'
-iface: enp0s8
+iface: eth1
 
 # The password for admin user
 mongo_admin_pass: 123456
 
 # The name of the replication set
-replica_set_name: mongo_replication
+replica_set_name: repl-prod
