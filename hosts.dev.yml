@@ -1,0 +1,11 @@
+[mongo_servers]
+smdb001.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb002.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb003.tst01.gdaas.com mongod_port=27017 ansible_user=root
+
+[mongod_primary]
+smdb001.tst01.gdaas.com mongod_port=27017 ansible_user=root
+
+[mongod_slaves]
+smdb002.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb003.tst01.gdaas.com mongod_port=27017 ansible_user=root
