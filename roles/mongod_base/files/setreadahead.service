@@ -5,7 +5,7 @@ Before=mongod.service
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sudo /usr/sbin/blockdev --setra 32 /dev/mapper/centos-root
+ExecStart=/usr/bin/sudo /usr/sbin/blockdev --setra 32 /dev/md126
 User=root
 
 [Install]
