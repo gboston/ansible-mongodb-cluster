@@ -5,12 +5,8 @@
   roles:
   - role: common
   tasks:
-    - name: Install Ansible Python 2 Dependencies
-      with_items:
-      - python-firewall
-      dnf:
-        name: "{{item}}"
-        state: present
+    - name: install firewalld
+      yum: name=firewalld state=latest
 
 - name: Install MongoDB
   hosts: mongo_servers
