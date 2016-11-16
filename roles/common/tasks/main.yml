@@ -1,7 +1,6 @@
 ---
 # This Playbook runs all the common plays in the deployment
 - name: Create the hosts file for all machines
-  debug: msg="{{ hostvars[inventory_hostname].ansible_default_ipv4.address }} {{ hostvars[inventory_hostname]["ansible_fqdn"] }} {{ hostvars[inventory_hostname]["ansible_hostname"] }}"
   template: src=hosts.j2 dest=/etc/hosts
 
 - name: Create the repository for 10Gen
