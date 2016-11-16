@@ -1,5 +1,6 @@
 ---
 # This Playbook runs all the common plays in the deployment
+- debug: msg="{{ hostvars[inventory_hostname].ansible_default_ipv4.address }} {{ hostvars[inventory_hostname]["ansible_fqdn"] }} {{ hostvars[inventory_hostname]["ansible_hostname"] }}"
 - name: Create the hosts file for all machines
   template: src=hosts.j2 dest=/etc/hosts
 
