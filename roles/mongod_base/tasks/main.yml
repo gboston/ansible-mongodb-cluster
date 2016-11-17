@@ -20,7 +20,7 @@
 
 # http://tom-chapman.uk/2012/12/28/installing-mongodb-on-a-linux-distro-using-systemd-instead-of-inittab/
 - name: Copy the systemd init file
-  copy: src=mongod.service dest=/lib/systemd/system/mongod.service
+  template: src=mongod.service.j2 dest=/lib/systemd/system/mongod.service
 
 - name: Copy the mongod sysconfig file
   copy: src=mongod_sysconfig dest=/etc/sysconfig/mongod
