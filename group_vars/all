@@ -25,4 +25,4 @@ iface: '{{ ansible_default_ipv4.interface }}'
 mongo_admin_pass: 123456
 
 # The name of the replication set
-replica_set_name: repl-prod
+replica_set_name: repl
