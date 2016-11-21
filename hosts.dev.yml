@@ -1,14 +1,14 @@
 [mongo_servers]
-10.5.11.7 mongod_port=27017 ansible_user=root
-10.5.11.8 mongod_port=27017 ansible_user=root
-10.5.11.9 mongod_port=27017 ansible_user=root
+smdb001.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb002.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb003.tst01.gdaas.com mongod_port=27017 ansible_user=root
 
 [mongod_primary]
-10.5.11.7 mongod_port=27017 ansible_user=root
+smdb001.tst01.gdaas.com mongod_port=27017 ansible_user=root
 
 [mongod_slaves]
-10.5.11.8 mongod_port=27017 ansible_user=root
-10.5.11.9 mongod_port=27017 ansible_user=root
+smdb002.tst01.gdaas.com mongod_port=27017 ansible_user=root
+smdb003.tst01.gdaas.com mongod_port=27017 ansible_user=root
 
 [mongo_servers:vars]
 root_disk_mapper=/dev/mapper/centos-root
